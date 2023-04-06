@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- This file was created with the aha Ansi HTML Adapter. https://github.com/theZiz/aha -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="application/xml+xhtml; charset=UTF-8" />
+<title>the awesome aha help</title>
+</head>
+<body style="color:white; background-color:black">
+<pre>
+<span style="font-weight:bold;color:red;">Ansi Html Adapter</span> Version 0.5
+<span style="font-weight:bold;">aha</span> takes SGR-colored Input and prints W3C conform HTML-Code
+use: <span style="font-weight:bold;">aha</span> &lt;<span style="text-decoration:underline;">options</span>&gt; [<span style="text-decoration:underline;">-f file</span>]
+     <span style="font-weight:bold;">aha</span> (<span style="text-decoration:underline;">--help</span>|<span style="text-decoration:underline;">-h</span>|<span style="text-decoration:underline;">-?</span>)
+<span style="font-weight:bold;">aha</span> reads the Input from a file or stdin and writes HTML-Code to stdout
+<span style="text-decoration:underline;">options</span>: --black,      -b: <span style="font-weight:bold;color:dimgray;"></span><span style="font-weight:bold;color:dimgray;background-color:white;">Black</span> Background and <span style="font-weight:bold;color:white;">White</span> &quot;standard color&quot;
+         --pink,       -p: <span style="font-weight:bold;color:fuchsia;">Pink</span> Background
+         --stylesheet, -s: Use a stylesheet instead of inline styles
+         --iso X,    -i X: Uses ISO 8859-X instead of utf-8. X must be 1..16
+         --title X,  -t X: Gives the html output the title &quot;X&quot; instead of
+                           &quot;stdin&quot; or the filename
+         --line-fix,   -l: Uses a fix for inputs using control sequences to
+                           change the cursor position like htop. It's a hot fix,
+                           it may not work with any program like htop. Example:
+                           <span style="font-weight:bold;">echo</span> q | <span style="font-weight:bold;">htop</span> | <span style="font-weight:bold;">aha</span> -l &gt; htop.htm
+         --word-wrap,  -w: Wrap long lines in the html file. This works with
+                           CSS3 supporting browsers as well as many older ones.
+         --no-header,  -n: Don't include header into generated HTML,
+                           useful for inclusion in full HTML files.
+Example: <span style="font-weight:bold;">aha</span> --help | <span style="font-weight:bold;">aha</span> --black &gt; aha-help.htm
+         Writes this help text to the file aha-help.htm
+
+Copyleft <span style="font-weight:bold;color:lime;">Alexander Matthes</span> aka <span style="text-decoration:underline;">Ziz</span> 2018
+         <span style="text-decoration:blink;color:aqua;">ziz@mailbox.org</span>
+         <span style="text-decoration:blink;color:aqua;">https://github.com/theZiz/aha</span>
+This application is subject to the <span style="font-weight:bold;color:#3333FF;">MPL</span> or <span style="font-weight:bold;color:#3333FF;">LGPL</span>.
+</pre>
+</body>
+</html>
