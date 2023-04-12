@@ -5,3 +5,4 @@ api.key
 .idea
 .check-build
 env/
+*.log
