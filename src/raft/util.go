@@ -69,7 +69,7 @@ var Debug_ int
 
 func Init() {
 	//set debug to be true
-	Debug_ = 0
+	Debug_ = 1
 	debugVerbosity = getVerbosity()
 	debugStart = time.Now()
 	// disable datetime logging
@@ -77,10 +77,13 @@ func Init() {
 }
 
 func Debug(topic LogTopic, format string, a ...interface{}) {
+	if debugVerbosity == 0 {
+		return
+	}
 	if Debug_ >= 1 {
-		if topic == dLock || topic == dHeart {
-			return
-		}
+		//if topic == dLock || topic == dHeart {
+		//	return
+		//}
 		time := time.Since(debugStart).Microseconds()
 		time /= 100
 		prefix := fmt.Sprintf("%06d %v ", time, string(topic))

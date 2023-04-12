@@ -503,6 +503,7 @@ func TestRejoin2B(t *testing.T) {
 }
 
 func TestBackup2B(t *testing.T) {
+	Init()
 	//Init()
 	servers := 5
 	cfg := make_config(t, servers, false, false)
